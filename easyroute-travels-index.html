@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d241f">
+<meta name="description" content="Easyroute Travels - Char Dham Yatra, Uttarakhand tours and premium car rentals from Haridwar.">
+<title>Easyroute Travels | Char Dham Yatra & Car Rentals</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f7f6f1;color:#17231f;line-height:1.5;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{font:inherit;border:0;cursor:pointer}
+:root{--green:#0d241f;--green2:#173d33;--sage:#718b76;--cream:#f7f6f1;--gold:#c89b4b;--white:#fff;--muted:#68736e;--line:#dfe4df}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:#0a1916;color:#dce9e2;font-size:12px;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,246,241,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.06)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.5px;color:var(--green);font-size:21px}
+.logoMark{width:39px;height:39px;border-radius:13px;background:var(--green);color:#e8d39c;display:grid;place-items:center;font-size:19px}
+.navlinks{display:flex;gap:26px;font-size:14px;font-weight:700;color:#405049}
+.navlinks a:hover{color:var(--gold)}
+.navcta{background:var(--green);color:#fff;padding:12px 18px;border-radius:12px;font-size:13px;font-weight:800}
+.menu{display:none;background:transparent;font-size:27px;color:var(--green)}
+.hero{position:relative;min-height:720px;background:var(--green);color:white;overflow:hidden}
+.heroVideo{position:absolute;inset:0;overflow:hidden;background:#0d241f}
+.heroVideo iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);border:0;pointer-events:none;opacity:.68;filter:saturate(.8)}
+.heroOverlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,22,18,.92) 0%,rgba(8,29,24,.70) 43%,rgba(8,25,21,.28) 100%),linear-gradient(0deg,rgba(5,20,16,.75),transparent 45%)}
+.heroContent{position:relative;z-index:2;padding:110px 0 85px;max-width:750px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);border-radius:100px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;margin-bottom:20px}
+.dot{width:7px;height:7px;border-radius:50%;background:#e7c26e;box-shadow:0 0 0 5px rgba(231,194,110,.12)}
+h1{font-size:clamp(43px,7vw,78px);line-height:.98;letter-spacing:-3.5px;margin-bottom:24px}
+h1 span{color:#e5c77f}
+.heroText{font-size:17px;max-width:600px;color:#dce8e1;margin-bottom:30px}
+.heroBtns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:13px;font-weight:800;font-size:14px;transition:.25s}
+.btnPrimary{background:#e5c77f;color:#16231e}
+.btnPrimary:hover{transform:translateY(-2px)}
+.btnGhost{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.07)}
+.heroStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:55px;max-width:690px}
+.stat{padding:15px 17px;border-left:1px solid rgba(255,255,255,.25)}
+.stat b{font-size:19px;display:block}.stat small{color:#c9d6cf}
+.quick{margin-top:-45px;position:relative;z-index:4}
+.quickbox{background:#fff;border:1px solid #e6e7e2;border-radius:22px;box-shadow:0 18px 55px rgba(15,38,31,.13);padding:20px;display:grid;grid-template-columns:1.1fr 1fr 1fr auto;gap:12px;align-items:end}
+.field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#77817c;font-weight:900;margin:0 0 6px 5px}
+.field select,.field input{width:100%;height:48px;border:1px solid #dfe4df;border-radius:11px;padding:0 12px;background:#fbfcfa;color:#24342e;outline:none}
+.quickbox .btn{height:48px}
+.section{padding:100px 0}
+.sectionHead{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:38px}
+.kicker{color:#8c6a2d;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.04;letter-spacing:-1.8px;color:var(--green)}
+.sectionHead p{max-width:480px;color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid #e4e7e1;border-radius:19px;overflow:hidden;transition:.3s;box-shadow:0 7px 25px rgba(18,37,31,.05)}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(18,37,31,.11)}
+.cardImg{height:210px;background-size:cover;background-position:center;position:relative}
+.badge{position:absolute;top:13px;left:13px;background:rgba(255,255,255,.92);padding:7px 10px;border-radius:100px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.7px}
+.cardBody{padding:17px}
+.cardBody h3{font-size:18px;color:var(--green);margin-bottom:5px}
+.cardBody p{font-size:12px;color:var(--muted);min-height:38px}
+.cardBottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
+.price{font-size:17px;font-weight:900;color:#173d33}.price small{font-size:10px;color:#89938e;font-weight:600}
+.smallBtn{padding:9px 12px;background:#edf2ed;color:var(--green);border-radius:9px;font-size:11px;font-weight:900}
+.rental{background:#0d241f;color:#fff;padding:100px 0}
+.rental h2{color:#fff}.rental .sectionHead p{color:#b9c9c1}
+.carGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+.car{background:#17382f;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;transition:.25s}
+.car:hover{transform:translateY(-4px);background:#1b4439}
+.carImg{height:145px;background-size:cover;background-position:center}
+.carBody{padding:15px}.carBody h3{font-size:16px;margin-bottom:3px}.carBody p{font-size:11px;color:#a9bbb3;margin-bottom:11px}
+.carPrice{font-weight:900;color:#e5c77f;font-size:17px}.carPrice span{font-size:10px;color:#aab8b2;font-weight:600}
+.routes{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.routeMain{background:#e8efe9;border-radius:24px;padding:35px;min-height:380px;position:relative;overflow:hidden}
+.routeMain:after{content:"✦";position:absolute;right:-10px;bottom:-60px;font-size:260px;color:rgba(23,61,51,.07)}
+.routeList{display:grid;gap:12px;margin-top:27px;position:relative;z-index:2}
+.routeItem{display:flex;align-items:center;gap:13px;background:rgba(255,255,255,.75);padding:13px;border-radius:12px}
+.num{width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:900}
+.routeItem b{font-size:13px}.routeItem small{display:block;color:var(--muted);font-size:10px}
+.routeSide{display:grid;gap:18px}
+.infoBox{border-radius:24px;padding:30px;background:#fff;border:1px solid #e3e6e0}.infoBox.dark{background:#c7d8ca}.infoBox h3{font-size:23px;color:var(--green);margin-bottom:8px}.infoBox p{font-size:13px;color:#5e6c65}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feature{background:#fff;padding:24px;border:1px solid #e2e6e1;border-radius:18px}
+.icon{width:42px;height:42px;border-radius:12px;background:#e8efe9;display:grid;place-items:center;margin-bottom:17px;font-size:20px}
+.feature h3{font-size:16px;margin-bottom:6px;color:var(--green)}.feature p{font-size:12px;color:var(--muted)}
+.cta{padding:90px 0}.ctaBox{background:linear-gradient(125deg,#173d33,#0b211c);border-radius:28px;padding:50px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px;position:relative;overflow:hidden}.ctaBox:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(255,255,255,.08);right:-100px;top:-100px}.ctaBox h2{color:#fff;font-size:clamp(30px,4vw,47px)}.ctaBox p{color:#bbcbc3;margin-top:10px;max-width:600px;font-size:13px}
+footer{background:#081713;color:#b7c8c0;padding:50px 0 25px}.footerGrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}.footerBrand p{font-size:12px;max-width:330px;margin-top:14px;color:#83968e}.footerTitle{color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:900;margin-bottom:15px}.footer a{display:block;font-size:12px;margin:9px 0;color:#9fb0a8}.copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:35px;padding-top:18px;font-size:10px;display:flex;justify-content:space-between;gap:15px}
+.wa{position:fixed;right:18px;bottom:18px;width:55px;height:55px;border-radius:50%;background:#20b96b;color:white;display:grid;place-items:center;font-size:25px;z-index:80;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}
+.modalBox{width:min(520px,100%);background:#fff;border-radius:22px;padding:25px;position:relative}.close{position:absolute;right:15px;top:13px;background:#edf0ec;width:35px;height:35px;border-radius:50%}.modalBox h3{color:var(--green);font-size:24px;margin-bottom:4px}.modalBox p{font-size:12px;color:var(--muted);margin-bottom:18px}.formGrid{display:grid;gap:10px}.formGrid input,.formGrid select{height:45px;border:1px solid #dfe4df;border-radius:10px;padding:0 12px}.success{display:none;background:#e7f5eb;color:#176c38;padding:11px;border-radius:10px;font-size:12px;margin-top:10px}.success.show{display:block}
+@media(max-width:950px){.cards{grid-template-columns:repeat(2,1fr)}.carGrid{grid-template-columns:repeat(3,1fr)}.quickbox{grid-template-columns:1fr 1fr}.routes{grid-template-columns:1fr}.footerGrid{grid-template-columns:1.4fr 1fr 1fr}.navlinks{display:none}.menu{display:block}}
+@media(max-width:600px){.topbar .container{justify-content:center}.navin{height:65px}.logo{font-size:18px}.logoMark{width:35px;height:35px}.navcta{display:none}.hero{min-height:700px}.heroContent{padding:75px 0 65px}.heroText{font-size:15px}h1{letter-spacing:-2.3px}.heroStats{grid-template-columns:1fr 1fr;margin-top:40px}.heroStats .stat:last-child{grid-column:span 2}.quick{margin-top:-28px}.quickbox{grid-template-columns:1fr;padding:15px}.section{padding:70px 0}.sectionHead{display:block}.sectionHead p{margin-top:12px}.cards{grid-template-columns:1fr 1fr;gap:10px}.cardImg{height:155px}.cardBody{padding:13px}.cardBody h3{font-size:15px}.carGrid{grid-template-columns:1fr 1fr}.carImg{height:125px}.features{grid-template-columns:1fr}.ctaBox{padding:32px 24px;display:block}.ctaBox .btn{margin-top:20px}.footerGrid{grid-template-columns:1fr 1fr}.footerBrand{grid-column:span 2}.copyright{display:block}.copyright span{display:block;margin-top:6px}.routeMain{padding:25px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Haridwar, Uttarakhand</span>
+    <span>24×7 Travel Assistance • Family & Group Tours</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="container navin">
+    <a href="#" class="logo"><span class="logoMark">ER</span> Easyroute Travels</a>
+    <div class="navlinks">
+      <a href="#tours">Tours</a><a href="#cars">Car Rental</a><a href="#routes">Char Dham</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+    </div>
+    <a class="navcta" href="tel:+919582907643">Call Now</a>
+    <button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="heroVideo">
+    <iframe
+      src="https://www.youtube.com/embed/q_K1sAGRnmY?autoplay=1&mute=1&loop=1&playlist=q_K1sAGRnmY&controls=0&playsinline=1&rel=0&modestbranding=1"
+      title="Easyroute Travels Uttarakhand"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div class="heroOverlay"></div>
+  <div class="container heroContent">
+    <div class="eyebrow"><span class="dot"></span> Explore Uttarakhand differently</div>
+    <h1>Journey into the <span>mountains.</span></h1>
+    <p class="heroText">Char Dham Yatra, spiritual journeys, scenic Uttarakhand tours and reliable car rentals — planned around your comfort, time and budget.</p>
+    <div class="heroBtns">
+      <a class="btn btnPrimary" href="#tours">Explore Packages →</a>
+      <a class="btn btnGhost" href="#cars">🚗 Rent a Car</a>
+    </div>
+    <div class="heroStats">
+      <div class="stat"><b>4+</b><small>Major pilgrimage routes</small></div>
+      <div class="stat"><b>24×7</b><small>Travel assistance</small></div>
+      <div class="stat"><b>Local</b><small>Uttarakhand experience</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="quick">
+  <div class="container">
+    <div class="quickbox">
+      <div class="field"><label>Travel Type</label><select id="quickType"><option>Char Dham Yatra</option><option>Car Rental</option><option>Uttarakhand Tour</option><option>Custom Trip</option></select></div>
+      <div class="field"><label>Pickup</label><input id="pickup" placeholder="e.g. Haridwar"></div>
+      <div class="field"><label>Travel Date</label><input id="date" type="date"></div>
+      <button class="btn btnPrimary" onclick="quickEnquiry()">Get Quote</button>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="tours">
+  <div class="container">
+    <div class="sectionHead">
+      <div><div class="kicker">Travel with purpose</div><h2>Journeys worth<br>remembering.</h2></div>
+      <p>From sacred temples to quiet mountain roads, choose a journey and let Easyroute handle the route, vehicle and travel coordination.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=80')"><span class="badge">Pilgrimage</span></div><div class="cardBody"><h3>Char Dham Yatra</h3><p>Yamunotri • Gangotri • Kedarnath • Badrinath</p><div class="cardBottom"><span class="price">₹6,999 <small>/ person</small></span><button class="smallBtn" onclick="openModal('Char Dham Yatra')">Enquire</button></div></div></article>
+      <article class="card"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=900&q=80')"><span class="badge">Spiritual</span></div><div class="cardBody"><h3>Kedarnath</h3><p>Plan a comfortable pilgrimage with local travel support.</p><div class="cardBottom"><span class="price">Custom</span><button class="smallBtn" onclick="openModal('Kedarnath Trip')">Enquire</button></div></div></article>
+      <article class="card"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=80')"><span class="badge">Nature</span></div><div class="cardBody"><h3>Rishikesh Escape</h3><p>Ganga, cafes, adventure and peaceful Himalayan views.</p><div class="cardBottom"><span class="price">Custom</span><button class="smallBtn" onclick="openModal('Rishikesh Escape')">Enquire</button></div></div></article>
+      <article class="card"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80')"><span class="badge">Tour</span></div><div class="cardBody"><h3>Uttarakhand Tour</h3><p>Flexible routes for families, couples and groups.</p><div class="cardBottom"><span class="price">Custom</span><button class="smallBtn" onclick="openModal('Uttarakhand Tour')">Enquire</button></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="rental" id="cars">
+  <div class="container">
+    <div class="sectionHead">
+      <div><div class="kicker">Drive your way</div><h2>Reliable cars.<br>Simple pricing.</h2></div>
+      <p>Choose a vehicle for your pilgrimage, family holiday, airport transfer or complete Uttarakhand trip.</p>
+    </div>
+    <div class="carGrid">
+      <article class="car"><div class="carImg" style="background-image:url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=700&q=80')"></div><div class="carBody"><h3>Dzire</h3><p>Comfortable • 4+1</p><div class="carPrice">₹3,300 <span>/ day</span></div></div></article>
+      <article class="car"><div class="carImg" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80')"></div><div class="carBody"><h3>Ertiga</h3><p>Family • 6+1</p><div class="carPrice">₹4,300 <span>/ day</span></div></div></article>
+      <article class="car"><div class="carImg" style="background-image:url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=700&q=80')"></div><div class="carBody"><h3>Kia Carens</h3><p>Premium • 6+1</p><div class="carPrice">₹4,500 <span>/ day</span></div></div></article>
+      <article class="car"><div class="carImg" style="background-image:url('https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=700&q=80')"></div><div class="carBody"><h3>Innova Crysta</h3><p>Premium • 6+1</p><div class="carPrice">₹6,000 <span>/ day</span></div></div></article>
+      <article class="car"><div class="carImg" style="background-image:url('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=700&q=80')"></div><div class="carBody"><h3>Innova Crysta</h3><p>Spacious • 7+1</p><div class="carPrice">₹6,500 <span>/ day</span></div></div></article>
+    </div>
+    <div style="margin-top:20px;text-align:center;color:#aebdb6;font-size:12px">Sharing option available • ₹6,999 / person</div>
+  </div>
+</section>
+
+<section class="section" id="routes">
+  <div class="container">
+    <div class="routes">
+      <div class="routeMain">
+        <div class="kicker">The sacred circuit</div>
+        <h2>Char Dham,<br>one unforgettable journey.</h2>
+        <p style="margin-top:10px;color:#65736c;font-size:13px;max-width:500px">A thoughtfully coordinated route covering Uttarakhand's four revered shrines.</p>
+        <div class="routeList">
+          <div class="routeItem"><span class="num">01</span><div><b>Yamunotri</b><small>Source of Yamuna • Barkot route</small></div></div>
+          <div class="routeItem"><span class="num">02</span><div><b>Gangotri</b><small>Bhagirathi valley • sacred river origin</small></div></div>
+          <div class="routeItem"><span class="num">03</span><div><b>Kedarnath</b><small>Himalayan shrine • spiritual highlight</small></div></div>
+          <div class="routeItem"><span class="num">04</span><div><b>Badrinath</b><small>Alaknanda valley • final dham</small></div></div>
+        </div>
+      </div>
+      <div class="routeSide">
+        <div class="infoBox dark"><h3>Made for families.</h3><p>Comfortable vehicles, practical planning and travel assistance for groups of different sizes.</p><button class="btn btnPrimary" style="margin-top:18px" onclick="openModal('Family Char Dham')">Plan My Trip</button></div>
+        <div class="infoBox"><h3>Starting from Haridwar</h3><p>Pickup and travel coordination available according to your selected route and vehicle.</p><a href="tel:+919582907643" class="btn" style="margin-top:15px;background:#edf2ed;color:#173d33">☎ Call for details</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why" style="padding-top:20px">
+  <div class="container">
+    <div class="sectionHead"><div><div class="kicker">Why Easyroute</div><h2>Travel without<br>the extra stress.</h2></div><p>We keep the booking experience simple, transparent and focused on getting you comfortably to the places that matter.</p></div>
+    <div class="features">
+      <div class="feature"><div class="icon">🚗</div><h3>Vehicle choices</h3><p>From economical Dzire to spacious Innova Crysta, choose what fits your group.</p></div>
+      <div class="feature"><div class="icon">🗺️</div><h3>Route planning</h3><p>Build your journey around pilgrimage, sightseeing, pickup points and your available days.</p></div>
+      <div class="feature"><div class="icon">🤝</div><h3>Travel assistance</h3><p>Get help with trip coordination before and during your Uttarakhand journey.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="ctaBox">
+      <div><div class="kicker" style="color:#e5c77f">Ready when you are</div><h2>Let's plan your<br>next mountain journey.</h2><p>Tell us your destination, date and group size. We'll help you choose the route and vehicle.</p></div>
+      <button class="btn btnPrimary" onclick="openModal('Travel Enquiry')">Start an Enquiry →</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footerGrid">
+      <div class="footerBrand"><a href="#" class="logo" style="color:#fff"><span class="logoMark">ER</span> Easyroute Travels</a><p>Char Dham Yatra, Uttarakhand tours and car rentals from Haridwar. Your route, your pace, your journey.</p></div>
+      <div><div class="footerTitle">Explore</div><a href="#tours">Tours</a><a href="#cars">Car Rental</a><a href="#routes">Char Dham</a></div>
+      <div><div class="footerTitle">Vehicles</div><a href="#cars">Dzire — ₹3,300</a><a href="#cars">Ertiga — ₹4,300</a><a href="#cars">Innova — from ₹6,000</a></div>
+      <div><div class="footerTitle">Contact</div><a href="tel:+919582907643">+91 95829 07643</a><a href="https://wa.me/919582907643" target="_blank">WhatsApp</a><a href="#contact">Request a quote</a></div>
+    </div>
+    <div class="copyright"><span>© 2026 Easyroute Travels. All rights reserved.</span><span>Haridwar • Uttarakhand</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919582907643?text=Hello%20Easyroute%20Travels%2C%20I%20want%20to%20plan%20a%20trip." target="_blank" aria-label="WhatsApp">⌕</a>
+
+<div class="modal" id="modal">
+  <div class="modalBox">
+    <button class="close" onclick="closeModal()">×</button>
+    <h3 id="modalTitle">Travel Enquiry</h3>
+    <p>Fill the details and continue on WhatsApp.</p>
+    <div class="formGrid">
+      <input id="name" placeholder="Your name">
+      <input id="phone" placeholder="Mobile number">
+      <input id="destination" placeholder="Destination / route">
+      <input id="travelDate" type="date">
+      <select id="vehicle"><option>Need vehicle recommendation</option><option>Dzire — ₹3,300/day</option><option>Ertiga — ₹4,300/day</option><option>Kia Carens — ₹4,500/day</option><option>Innova Crysta 6+1 — ₹6,000/day</option><option>Innova Crysta 7+1 — ₹6,500/day</option><option>Sharing — ₹6,999/person</option></select>
+      <button class="btn btnPrimary" onclick="sendWhatsApp()">Send Enquiry on WhatsApp →</button>
+    </div>
+    <div class="success" id="success">Opening WhatsApp…</div>
+  </div>
+</div>
+
+<script>
+const modal=document.getElementById('modal');
+function openModal(title){document.getElementById('modalTitle').textContent=title||'Travel Enquiry';modal.classList.add('open')}
+function closeModal(){modal.classList.remove('open')}
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+function sendWhatsApp(){
+ const n=document.getElementById('name').value||'Customer';
+ const p=document.getElementById('phone').value||'Not provided';
+ const d=document.getElementById('destination').value||'Not specified';
+ const dt=document.getElementById('travelDate').value||'Not specified';
+ const v=document.getElementById('vehicle').value;
+ const msg=`Hello Easyroute Travels,%0A%0AI want to make a travel enquiry.%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p)}%0ADestination: ${encodeURIComponent(d)}%0ADate: ${encodeURIComponent(dt)}%0AVehicle: ${encodeURIComponent(v)}`;
+ document.getElementById('success').classList.add('show');
+ setTimeout(()=>window.open('https://wa.me/919582907643?text='+msg,'_blank'),350);
+}
+function quickEnquiry(){
+ const type=document.getElementById('quickType').value;
+ const pickup=document.getElementById('pickup').value||'Haridwar';
+ const date=document.getElementById('date').value||'Not specified';
+ const msg=`Hello Easyroute Travels,%0A%0AI need a quote.%0ATravel type: ${encodeURIComponent(type)}%0APickup: ${encodeURIComponent(pickup)}%0ADate: ${encodeURIComponent(date)}`;
+ window.open('https://wa.me/919582907643?text='+msg,'_blank');
+}
+document.getElementById('date').min=new Date().toISOString().split('T')[0];
+document.getElementById('travelDate').min=new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
